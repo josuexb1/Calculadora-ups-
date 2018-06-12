@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<title>Calculadora UPS</title>
+<LINK REL="stylesheet" TYPE="text/css" href="estilos.css">
+<body>
+<h1>Calculadora para UPS</h1>
+<h2>Busca la etiqueta en la parte trasera del equipo </h2>
+<p>Calcula la potencia si esta en Watts</p>
+
+<p>
+  <label>Introduce la energia que requiere</label>
+  <input id="inputFahrenheit" type="number" placeholder="" oninput="temperatureConverter(this.value)" onchange="temperatureConverter(this.value)">
+</p>
+<p>Potencia: <span id="outputCelcius"></span></p>
+
+<script>
+function temperatureConverter(valNum) {
+  valNum = parseFloat(valNum);
+  document.getElementById("outputCelcius").innerHTML=(valNum*1.4);
+}
+</script>
+
+</body>
+</html>
